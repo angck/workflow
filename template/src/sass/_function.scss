@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+/**
+ * @param  {PX} 像素
+ * @return {REM}
+ */
+@function rem(v) {
+    @return v/20px * 1rem;
+}

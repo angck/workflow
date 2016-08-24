@@ -1,0 +1,65 @@
+@charset "UTF-8";
+/**
+ * 设置透明背景
+ * @param  {RGBA} $rbga rgba属性值
+ * @return
+ */
+@mixin alpha-bg($rbga) {
+    background: $rgba;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($rgba)}', endColorstr='#{ie-hex-str($rgba)}', gradientType=0);
+}
+
+/**
+ * 清除浮动
+ * @return {[type]} [description]
+ */
+@mixin clearfix() {
+    /* IE6-7 触发 hasLayout */
+    *zoom: 1;
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+/* 强制不换行 */
+@mixin nowrap() {
+    white-space: nowrap;
+    word-wrap: normal;
+}
+
+/* 连续字符换行 */
+@mixin wrap() {
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+/**
+* 文字溢出显示省略号
+* 1. Chrome 21+ bug https://bugs.webkit.org/show_bug.cgi?id=121902
+*/
+@mixin ellipsis() {
+    display: block;
+    white-space: nowrap;
+    word-wrap: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+
+/* --------------------------------------------------------------------------
+ 图片替换
+ -------------------------------------------------------------------------- */
+/** 隐藏文字
+* 1.text-indent:-999em 存在性能问题：
+*   http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
+*/
+@mixin text-hide() {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
