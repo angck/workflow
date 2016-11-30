@@ -6,7 +6,7 @@
  */
 @mixin alpha-bg($rbga) {
     background: $rgba;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($rgba)}', endColorstr='#{ie-hex-str($rgba)}', gradientType=0);
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr="#{ie-hex-str($rgba)}", endColorstr="#{ie-hex-str($rgba)}", gradientType=0);
 }
 
 /**
@@ -16,12 +16,12 @@
 @mixin clearfix() {
     /* IE6-7 触发 hasLayout */
     *zoom: 1;
-    &:before,
-    &:after {
+    &::before,
+    &::after {
         content: "";
         display: table;
     }
-    &:after {
+    &::after {
         clear: both;
     }
 }

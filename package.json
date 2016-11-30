@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/angck/Tui#readme",
   "devDependencies": {
+    "eslint": "^3.11.1",
+    "eslint-plugin-react": "^6.7.1",
     "gulp": "^3.9.1",
     "gulp-changed": "^1.3.0",
     "gulp-clean": "^0.3.2",
