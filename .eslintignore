@@ -3,3 +3,5 @@
 # Ignore built files except build/index.js
 
 # gulpfile.js
+
+template/src/js/eco.js
