@@ -7,18 +7,18 @@ var sprite = require('gulp.spritesmith'); // image sprite
 var uglify = require('gulp-uglify'); // JS文件压缩
 var imagemin = require('gulp-imagemin'); // imagemin 图片压缩
 var pngquant = require('imagemin-pngquant'); // imagemin 深度压缩
-var livereload = require('gulp-livereload'); // 网页自动刷新（服务器控制客户端同步刷新）
+// var livereload = require('gulp-livereload'); // 网页自动刷新（服务器控制客户端同步刷新）
 var webserver = require('gulp-webserver'); // 本地服务器
 var rename = require('gulp-rename'); // 文件重命名
 var sourcemaps = require('gulp-sourcemaps'); // 来源地图
 var changed = require('gulp-changed'); // 只操作有修改过的文件
 var concat = require('gulp-concat'); // 文件合并
 var clean = require('gulp-clean'); // 文件清理
-var sequence = require('gulp-sequence'); // 控制任务执行顺序
+// var sequence = require('gulp-sequence'); // 控制任务执行顺序
 var template = require('gulp-template'); // 模版处理
 var argv = require('yargs').argv; // 处理命令行差数
-var fs = require('fs');
-var path = require('path');
+// var fs = require('fs');
+// var path = require('path');
 
 /**
  * 全局变量设置

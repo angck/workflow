@@ -8,7 +8,8 @@
         (function() {
             function refreshRem() {
                 var width = docEl.getBoundingClientRect().width;
-                rem = width / (BASE_WIDTH / ROOT_FONT_SIZE);
+                var dpr = window.devicePixelRatio;
+                rem = width * dpr / (BASE_WIDTH / ROOT_FONT_SIZE);
                 docEl.style.fontSize = rem + "px";
             }
             var tid = null, docEl = document.documentElement, BASE_WIDTH = 750, ROOT_FONT_SIZE = 20;
@@ -28,11 +29,11 @@
         };
     </script>
     <%}%>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <div class="wrapper">
-        <%＝ (type === 'm') ? 'This is webapp' : 'This is PC page'}%>
+        body
     </div>
 
     <%if(type === 'm') {%>
