@@ -4,6 +4,7 @@ env:
   es6: true
   node: true
   jquery: true
+  amd: true
 extends: 'eslint:recommended'
 globals: 
 installedESLint: true
