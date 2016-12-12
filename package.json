@@ -38,6 +38,8 @@
     "gulp-webserver": "^0.9.1",
     "gulp.spritesmith": "^6.2.1",
     "imagemin-pngquant": "^4.2.2",
+    "postcss": "^5.2.6",
+    "stylelint": "^7.6.0",
     "yargs": "^4.6.0"
   },
   "dependencies": {}

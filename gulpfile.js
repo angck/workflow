@@ -17,6 +17,7 @@ var clean = require('gulp-clean'); // 文件清理
 // var sequence = require('gulp-sequence'); // 控制任务执行顺序
 var template = require('gulp-template'); // 模版处理
 var argv = require('yargs').argv; // 处理命令行差数
+var less = require('gulp-less'); // 处理less
 // var fs = require('fs');
 // var path = require('path');
 
@@ -78,7 +79,7 @@ function compileSprite(imageFolder) {
         }
     };
 
-    var pName = argv.p;
+    // var pName = argv.p;
     var spriteData = gulp.src(spriteConfig.spriteSource)
         .pipe(sprite(spriteConfig.spriteMithConfig));
 
@@ -107,6 +108,15 @@ gulp.task('sass', function () {
         .pipe(gulp.dest(destPath.css)).on('end', function () {
             console.log('sass');
         });
+});
+
+// less 处理
+gulp.task('less', function() {
+    return gulp.src(srcPath.css + '/**/*.less')
+        .pipe(sourcemaps.init())
+        .pipe(less())
+        .pipe(sourcemaps.write('./maps'))
+        .pipe(gulp.dest(destPath.css));
 });
 
 // JS压缩&重命名
@@ -222,6 +232,7 @@ gulp.task('help', function () {
     console.log('----------------- 开发环境 -----------------');
     console.log('gulp html      HTML处理');
     console.log('gulp sass      样式处理');
+    console.log('gulp less      样式处理');
     console.log('gulp sprite        图片合并');
     console.log('gulp script        JS文件压缩&重命名');
     console.log('gulp copy       复制js目录的非js文件');

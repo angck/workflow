@@ -12,6 +12,8 @@ script:
 	@./node_modules/.bin/gulp script --n=$(Name) --t=$(Type)
 sass: sprite
 	@./node_modules/.bin/gulp sass --n=$(Name) --t=$(Type)
+less: sprite
+	@./node_modules/.bin/gulp less --n=$(Name) --t=$(Type)
 sprite:
 	@./node_modules/.bin/gulp sprite --n=$(Name) --t=$(Type)
 html:
